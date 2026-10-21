@@ -3,10 +3,11 @@ A port of Zelda3 to Android. <br>
 
 Original Repository: https://github.com/snesrev/zelda3 <br>
 
-Use the instructions on the original repository (or below if you don't have access to a computer) to extract the zelda3_assets.dat file from your rom and put it in Android/data/com.dishii.zelda3/files <br>
-Running the app once will create the directory. <br>
+On first launch the app asks you to select your own copy of *The Legend of Zelda: A Link to the Past (USA)*. It reads that ROM once, builds `zelda3_assets.dat`, and then starts the game. Later launches go straight into the game. The ROM is not copied or kept, and this app does not ship game assets. <br>
 
-Android 13 users: check the releases tab for the Android 13 version of the app. 
+A headered `.smc` (512-byte copier header) is accepted. The ROM the patch expects is the No-Intro USA dump, 1,048,576 bytes, CRC32 `777AAC2F`. <br>
+
+If you already have a `zelda3_assets.dat`, put it in `Android/data/com.dishii.zelda3/files` and the ROM prompt is skipped. <br>
 
 NOTE: Controller only. No touch controls yet. <br>
 
@@ -18,7 +19,8 @@ L3 Turbo button <br>
 18:9 Aspect Ratio <br>
 Fullscreen(no android on-screen controls) <br>
 
-<h3>Instructions for creating zelda3_assets.dat on android:</h3>
+<h3>Optional: creating zelda3_assets.dat yourself</h3>
+The in-app ROM picker does this for you. Use the steps below only if you want to build the assets file on a computer (or on-device with Python) and drop it into `Android/data/com.dishii.zelda3/files`. <br>
 1. Download PyDroid: https://play.google.com/store/apps/details?id=ru.iiec.pydroid3&hl=en_US. Choose to skip any options that ask for money, you can do all of the following steps without paying.<br>
 2. Open the hamburger menu at the top left of the app and select Pip.<br>
 3. Type in "Pillow" without the quotes and it will have you install the repository app from the app store.<br>

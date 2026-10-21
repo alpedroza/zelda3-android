@@ -31,3 +31,8 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# User ROMs and the extracted asset pack. The app ships only the BPS patch.
+*.sfc
+*.smc
+zelda3_assets.dat
